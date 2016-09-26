@@ -1,0 +1,31 @@
+ {
+  "manifest_version": 2,
+  "name": "HH",
+  "version": "1.0",
+  
+ "permissions": [
+  "tabs", // Разрешить расширению работать с вкладками
+  "https://hh.ru/*",
+  "https://api.hh.ru/*", // Разрешить расширению обращаться к указанному адресу
+  
+  "https://hh.ru/oauth/*",
+  "https://hh.ru/account/*"
+ ],
+   "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+
+      "browser_action": {
+        "default_icon": "images/38.png",
+        "default_title": "HH"
+      //  "default_popup": "popup.html"
+    },
+	
+	"web_accessible_resources": [
+		"oauth-callback.html",
+		"oauth-callback.js"
+  ]
+
+}
