@@ -83,6 +83,9 @@ function RenderViews(){
 
 function normalizeDate(date){ 
 var dateTime = new Date(date); 
-return dateTime.getDate()+'.'+(dateTime.getMonth()+1)+'.'+dateTime.getFullYear()+' '+ 
-dateTime.getHours()+':'+dateTime.getMinutes();
+return ((dateTime.getDate()<10)?'0'+dateTime.getDate():dateTime.getDate())+'.'+
+(((dateTime.getMonth()+1)<10)?'0'+(dateTime.getMonth()+1):(dateTime.getMonth()+1))+'.'+
+dateTime.getFullYear()+', '+ 
+((dateTime.getHours()<10)?0+dateTime.getHours():dateTime.getHours())+':'+
+((dateTime.getMinutes()<10)?'0'+dateTime.getMinutes():dateTime.getMinutes());
 }
